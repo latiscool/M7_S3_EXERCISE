@@ -1,14 +1,14 @@
 M7_S3 EXERCISE
 
 
-## 1.- Crear entorno virtual en Python para trabajar con Django.
+## Etapa 1: Crear entorno virtual en Python para trabajar con Django.
 ```	
 pip install virtualenvwrapper
 mkvirtualenv django-orm-postgresql
 workon django-orm-postgresql # (para ingresar al entorno, en caso de NO ingresar automaticamente)
 ```	
 
-## 2: Creación de la base de datos y usuario en PostgreSQL
+## Etapa 2: Creación de la base de datos y usuario en PostgreSQL
 #### #En la consola de SQL shell
 ```	
 psql
@@ -28,7 +28,7 @@ CREATE DATABASE project_orm_django ;
 	ALTER ROLE userdjango  SET timezone TO 'UTC';
 	GRANT ALL PRIVILEGES ON SCHEMA public TO userdjango;
 	ALTER ROLE userdjango SET search_path TO public;
-	```	
+	
 
 
 ## Etapa 3: Creación del proyecto Django
@@ -57,7 +57,8 @@ DATABASES = {
 ```	
 #### #En CMD verificar que Django puede conectarse a PostgreSQL:
 ```	
-python manage.py check System check identified no issues (0 silenced). #Significa esta ok la conexion
+python manage.py check 
+System check identified no issues (0 silenced). #Significa esta ok la conexion
 ```	
 
 
